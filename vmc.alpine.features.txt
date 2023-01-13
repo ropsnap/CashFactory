@@ -1,0 +1,11 @@
+no-ip3 duc
+  https://www.noip.com/support/knowledgebase/install-linux-3-x-dynamic-update-client-duc/
+  de alguma dessas formas ai
+   ou parece q so pegando um bin pronto q tem no dir unziped e copiando p /usr/local/bin funfa
+   
+wg (wireguard-tools) all working
+  instala pelo APK add --force....
+
+loclx
+  https://api.localxpose.io/api/v2/downloads/loclx-linux-amd64.zip
+  dar unzip no file e mv ele pra /usr/loca;/bin

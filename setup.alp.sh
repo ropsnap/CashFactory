@@ -11,12 +11,12 @@
 
 # install and setup docker on the host, the following command will need a sudo to correctly run : sudo ./setup.sh
 
-mkdir /usr/share
-mkdir /usr/share/keyrings
+mkdir -p /usr/share
+mkdir -p /usr/share/keyrings
 chmod 744 -R /usr/share/keyrings
 
-mkdir /etc/apt
-mkdir /etc/apt/sources.list.d
+mkdir -p /etc/apt
+mkdir -p /etc/apt/sources.list.d
 chmod 744 -R /etc/apt/sources.list.d
 
 apk update;

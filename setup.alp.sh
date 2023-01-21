@@ -17,9 +17,15 @@ apk update;
 
 apk add ca-certificates
 apk add curl 
+apk add dpkg
 apk add gnupg 
 apk add lsb-release 
 apk add git
+
+mkdir /etc/share
+mkdir /etc/share/keyrings
+
+chmod 744 -R /etc/share/keyrings
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null

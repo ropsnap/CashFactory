@@ -11,9 +11,9 @@
 
 # install and setup docker on the host, the following command will need a sudo to correctly run : sudo ./setup.sh
 
-mkdir /etc/share
-mkdir /etc/share/keyrings
-chmod 744 -R /etc/share/keyrings
+mkdir /usr/share
+mkdir /usr/share/keyrings
+chmod 744 -R /usr/share/keyrings
 
 mkdir /etc/apt
 mkdir /etc/apt/sources.list.d

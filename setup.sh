@@ -12,6 +12,19 @@
 # install and setup docker on the host, the following command will need a sudo to correctly run : sudo ./setup.sh
 
 echo;
+echo '	Appending docker repositories...'
+echo;
+
+# adds docker necessary repositoryes for when run ./setup.sh later
+echo 'http://ftp.halifax.rwth-aachen.de/alpine/v3.16/main' >> /etc/apk/repositories
+echo 'http://ftp.halifax.rwth-aachen.de/alpine/v3.16/community' >> /etc/apk/repositories
+
+echo;
+echo '	Updating docker repositories...'
+
+apk update;
+
+echo;
 echo '	Setting up CashFactory-vmc...'
 echo;
 
@@ -44,14 +57,14 @@ service docker start
 rc-update add docker
 
 apk add docker-compose;
+apk add docker-compose --force-broken-world; # ensure
+
 
 echo;
 echo '	Opening .env for setup...';
-echo;
 
 nano $HOME/CashFactory-vmc/.env;
 
-echo;
 echo '	Starting bitping setup...'
 echo;
 
